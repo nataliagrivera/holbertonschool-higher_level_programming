@@ -1,23 +1,2 @@
 #!/usr/bin/python3
-str = "The Zen of Python, by Tim Peters\n"
-
-str += "Beautiful is better than ugly.\n"
-str += "Explicit is better than implicit.\n"
-str += "Simple is better than complex.\n"
-str += "Complex is better than complicated.\n"
-str += "Flat is better than nested.\n"
-str += "Sparse is better than dense.\n"
-str += "Readability counts.\n"
-str += "Special cases aren't special enough to break the rules.\n"
-str += "Although practicality beats purity.\n"
-str += "Errors should never pass silently.\n"
-str += "Unless explicitly silenced.\n"
-str += "In the face of ambiguity, refuse the temptation to guess.\n"
-str += "Theregit should be one-- and preferably only one --obvious way to do it.\n"
-str += "Although that way may not be obvious at first unless you're Dutch.\n"
-str += "Now is better than never.\n"
-str += "Although never is often better than *right* now.\n"
-str += "If the implementation is hard to explain, it's a bad idea.\n"
-str += "If the implementation is easy to explain, it may be a good idea.\n"
-str += "Namespaces are one honking great idea -- let's do more of those!\n"
-print(str)
+import this
