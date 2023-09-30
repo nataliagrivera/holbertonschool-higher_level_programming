@@ -10,3 +10,4 @@ else:
     for j in range(1, ac):
         sum += int(sys.argv[j])
     print("{}".format(sum))
+    
