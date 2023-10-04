@@ -1,0 +1,1 @@
+The "python-more_data_structure" directory is an extension of a prior data structure project, serving as a repository for additional Holberton projects. It's a dedicated space for storing and organizing new Python projects that build upon the foundation of data structures.
