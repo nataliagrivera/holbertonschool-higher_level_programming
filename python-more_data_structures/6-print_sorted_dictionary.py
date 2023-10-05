@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
 def print_sorted_dictionary(a_dictionary):
-        for key in sorted(a_dictionary.items()):
-            print("{}: {} ".format(key[0], key[1]))
+    sorted_dic = dict(sorted(a_dictionary.items()))
+    for key, value in sorted_dic.items():
+        print(key + ":", value)
