@@ -6,4 +6,4 @@ class Square:
     """This class is empty"""
     def __init__(self, size):
         """This is the instantiation method"""
-        self._Square_size = size  # private instance attribute
+        self._Square__size = size  # private instance attribute
