@@ -1,3 +1,6 @@
 #!/usr/bin/python3
+"""This module creates an empty class named square"""
+
 class Square:
-    pass # An empty block
+    """This class is empty"""
+    pass
