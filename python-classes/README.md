@@ -1,7 +1,5 @@
 # Project Badge: Python - Classes and Objects
 
-## Author: Guillaume
-## Project Weight: 1
 
 Welcome to the Python - Classes and Objects project by Guillaume!
 
