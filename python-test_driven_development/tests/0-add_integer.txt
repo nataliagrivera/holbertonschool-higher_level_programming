@@ -1,6 +1,7 @@
 The ''0-add_integer'' module
 ==============================
-using add integer
+
+Using ``add``
 ------------------------------
     >>> add_integer = __import__('0-add_integer').add_integer
 
@@ -23,10 +24,10 @@ using add integer
         ...
     TypeError: a must be an integer
 
-    >>> add_integer('a', 'b')
+    >>> add_integer(1000, 'b')
     Traceback (most recent call last):
         ...
-    TypeError: a must be an integer
+    TypeError: b must be an integer
 
     >>> add_integer(5, 9)
     14
