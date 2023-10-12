@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 def add_integer(a, b=98):
     """This function adds 2 integers
-    >>> add_integer = __import__('0-add_integer').add_integer
-
     >>> add_integer(5)
     103
 
