@@ -1,7 +1,8 @@
+
 The ''0-add_integer'' module
 ==============================
 
-Using ``add``
+Using ``add_integer``
 ------------------------------
     >>> add_integer = __import__('0-add_integer').add_integer
 
@@ -60,4 +61,5 @@ Using ``add``
     OverflowError: cannot convert float infinity to integer
 
     >>> add_integer(1.5, 2.5)
+    3
     
