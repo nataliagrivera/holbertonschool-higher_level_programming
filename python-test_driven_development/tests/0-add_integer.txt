@@ -38,6 +38,7 @@ Using ``add``
     TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
 
     >>> add_integer(1e210, 2t3e)
+    Traceback (most recent call last):
         ...
     SyntaxError: invalid syntax
 
@@ -45,3 +46,15 @@ Using ``add``
     Traceback (most recent call last):
         ...
     TypeError: a must be an integer
+
+    >>> add_integer('a', 'b')
+    Traceback (most recent call last):
+        ...
+    NameError: name 'add_integer' is not defined
+
+    >>> a = float("inf")
+    >>> b = 10
+    >>> add_integer(a, b)
+
+
+
