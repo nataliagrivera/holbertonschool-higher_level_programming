@@ -8,6 +8,8 @@ that defines a rectangle
 class Rectangle:
     """ Definition of rectangle attribute """
 
+    number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         """ Initialize by passing a width and a height """
         if type(width) is not int:
@@ -21,6 +23,7 @@ class Rectangle:
         else:
             self.__height = height
             self.__width = width
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -78,3 +81,12 @@ class Rectangle:
             if i != self.__height - 1:
                 rec_print += "\n"
         return rec_print
+
+    def __repr__(self):
+        """ Return string representation of Rectangle """
+        return f'Rectangle({self.__width}, {self.__height})'
+
+    def __del__(self):
+        del self
+        print("Bye rectangle...")
+        Rectangle.number_of_instances -= 1
