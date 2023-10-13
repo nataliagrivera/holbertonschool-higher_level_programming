@@ -1,3 +1,7 @@
+#!/usr/bin/python3
+"""This module has a function that divides all elements of a matrix"""
+
+
 def matrix_divided(matrix, div):
     # Check if matrix is a list of lists containing integers or floats
     if not isinstance(matrix, list) or not all(isinstance(row, list) for row in matrix) or \
