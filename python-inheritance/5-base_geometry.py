@@ -1,13 +1,11 @@
 #!/usr/bin/python3
 """
-This module has 
-an empty class 
-named Geometry
+This module has aa empty class named Geometry
 """
+
+
 class BaseGeometry:
     """
-    Class BaseGeometry
+    Empty class namd Base Geometry
     """
     pass
-
-obj = BaseGeometry()
