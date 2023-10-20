@@ -1,15 +1,15 @@
 #!/usr/bin/python3
 """
-This module has aa empty class named Geometry
+This module has an empty class named Geometry
 """
 
 
 class BaseGeometry:
     """
-    class exception
+    Class description for Base Geometry
     """
     def area(self):
         """
-        This function raises an exception
+        Public instance method that raise an Exception
         """
-        raise Exception ('area()is not implemented')
+        raise Exception('area() is not implemented')
