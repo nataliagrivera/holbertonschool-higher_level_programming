@@ -19,13 +19,13 @@ class Rectangle(Base):
             ValueError: if width, height, x, y, or id is <= 0
         """
 
-        super().__init__(id)
-        # self.id = id
         self.width = width
         self.height = height
         self.x = x
         self.y = y
     
+        super().__init__(id)
+       
         # Getter methods for width, height, x, and y
         @property
         def width(self):
