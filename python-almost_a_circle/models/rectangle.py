@@ -29,42 +29,58 @@ class Rectangle(Base):
         # Getter methods for width, height, x, and y
         @property
         def width(self):
-            """Getter method for width"""
+            """
+            Getter method for width
+            """
             return self.__width
         
         @property
         def height(self):
-            """Getter method for height"""
+            """
+            Getter method for height
+            """
             return self.__height
         
         @property
         def x(self):
-            """Getter method for x"""
+            """
+            Getter method for x
+            """
             return self.__x
         
         @property
         def y(self):
-            """Getter method for y"""
+            """
+            Getter method for y
+            """
             return self.__y
         
         # Setter methods for width, height, x, and y
         @width.setter
         def width(self, value):
-            """Setter method for width"""
+            """
+            Setter method for width
+            """
             self.__width = value
 
         @height.setter
         def height(self, value):
-            """Setter method for height"""
+            """
+            Setter method for height
+            """
             self.__height = value
         
         @x.setter
         def x(self, value):
-            """Setter method for x"""
+            """
+            Setter method for x
+            """
             self.__x = value
 
         @y.setter
         def y(self, value):
-            """Setter method for y"""
+            """
+            Setter method for y
+            """
             self.__y = value
         
