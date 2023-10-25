@@ -8,7 +8,6 @@ class Base:
 
     def __init__(self, id=None):
         """ Init method """
-
         if id is not None:
             self.id = id
         else:
