@@ -1,4 +1,4 @@
-#!/usr/bin/python3 
+#!/usr/bin/python3
 """Class Rectangle"""
 from models.base import Base
 
@@ -7,7 +7,7 @@ class Rectangle(Base):
     """Represents rectangle class"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        """ Initialie rectangle class 
+        """ Initialie rectangle class
         Args:
             width (int): width of rectangle
             height (int): height of rectangle
@@ -23,9 +23,9 @@ class Rectangle(Base):
         self.height = height
         self.x = x
         self.y = y
-    
+
         super().__init__(id)
-       
+
         # Getter methods for width, height, x, and y
         @property
         def width(self):
@@ -33,28 +33,28 @@ class Rectangle(Base):
             Getter method for width
             """
             return self.__width
-        
+
         @property
         def height(self):
             """
             Getter method for height
             """
             return self.__height
-        
+
         @property
         def x(self):
             """
             Getter method for x
             """
             return self.__x
-        
+
         @property
         def y(self):
             """
             Getter method for y
             """
             return self.__y
-        
+
         # Setter methods for width, height, x, and y
         @width.setter
         def width(self, value):
@@ -69,7 +69,7 @@ class Rectangle(Base):
             Setter method for height
             """
             self.__height = value
-        
+
         @x.setter
         def x(self, value):
             """
@@ -83,4 +83,3 @@ class Rectangle(Base):
             Setter method for y
             """
             self.__y = value
-        
