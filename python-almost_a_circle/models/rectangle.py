@@ -10,7 +10,6 @@ class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         """
         Initilizes the rectangle.
-
         Args:
         width (int): width of the rectangle
         height (int): height of the rectangle
@@ -34,7 +33,7 @@ class Rectangle(Base):
             """
             Getter method for width
             """
-            return self.width
+            return self.__width
 
         @width.setter
         def width(self, value):
@@ -48,7 +47,7 @@ class Rectangle(Base):
             """
             Getter method for height
             """
-            return self.height
+            return self.__height
 
         @height.setter
         def height(self, value):
@@ -62,7 +61,7 @@ class Rectangle(Base):
             """
             Getter method for x
             """
-            return self.x
+            return self.__x
 
         @x.setter
         def x(self, value):
@@ -76,7 +75,7 @@ class Rectangle(Base):
             """
             Getter method for y
             """
-            return self.y
+            return self.__y
 
         @y.setter
         def y(self, value):
