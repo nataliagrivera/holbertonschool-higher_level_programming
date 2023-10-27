@@ -1,13 +1,26 @@
 #!/usr/bin/python3
-""" Base class """
+"""
+This module contains the clase Base.
+The goal of it is to manage id attribute
+in all your future classes and to avoid
+duplicating the same code
+"""
+
+
+from os import path
+import json
 
 
 class Base:
-    """Represents the base of all other classes in this project"""
+    """ This class will be the base of all other
+    classes in this projects. """
     __nb_objects = 0
 
     def __init__(self, id=None):
-        """ Init method """
+        """
+        This funciton initializa the
+        class by receiving the id argument
+        """
         if id is not None:
             self.id = id
         else:
@@ -16,59 +29,65 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
-        """ Returns the JSON string representation of list_dictionaries """
-        import json
-        if list_dictionaries is None or list_dictionaries == []:
+        """
+        This function returns a JSON string representation of
+        the dictionary passed to us
+        """
+        if list_dictionaries is None:
             return "[]"
         else:
             return json.dumps(list_dictionaries)
 
     @classmethod
     def save_to_file(cls, list_objs):
-        """ Writes the JSON string representation of list_objs to a file """
-        import json
-        filename = cls.__name__ + ".json"
-        with open(filename, "w") as f:
+        """
+        Writes the JSON string representation of list_objs
+        to a file
+        """
+        filename = cls.__name__ + '.json'
+        with open(filename, 'w') as fd:
+            list_instance = []
             if list_objs is None:
-                f.write("[]")
+                fd.write(cls.to_json_string(list_instance))
             else:
-                list_dicts = []
-                for obj in list_objs:
-                    list_dicts.append(obj.to_dictionary())
-                f.write(cls.to_json_string(list_dicts))
+                for i in list_objs:
+                    list_instance.append(i.to_dictionary())
+                fd.write(cls.to_json_string(list_instance))
 
     @staticmethod
     def from_json_string(json_string):
-        """ Returns the list of the JSON string representation json_string """
-        import json
-        if json_string is None or json_string == "":
+        """
+        Return a list of JSON string representation of json_string
+        """
+        if json_string is None:
             return []
         else:
-            return json.loads(json_string)
+            li = json.loads(json_string)
+            return li
 
     @classmethod
     def create(cls, **dictionary):
-        """ Returns an instance with all attributes already set """
-        if cls.__name__ == "Rectangle":
-            dummy = cls(1, 1)
-        elif cls.__name__ == "Square":
-            dummy = cls(1)
-        dummy.update(**dictionary)
+        """
+        Return an instance witl all attribute aleady set
+        """
+        if cls.__name__ == 'Square':
+            dummy = cls(5)
+        elif cls.__name__ == 'Rectangle':
+            dummy = cls(5, 5)
+        cls.update(dummy, **dictionary)
         return dummy
 
     @classmethod
     def load_from_file(cls):
-        """ Returns a list of instances """
-        import json
-        filename = cls.__name__ + ".json"
-        try:
-            with open(filename, "r") as f:
-                list_dicts = cls.from_json_string(f.read())
-                list_instances = []
-                for dict in list_dicts:
-                    list_instances.append(cls.create(**dict))
-                return list_instances
-        except FileNotFoundError:
+        """
+        Return a list of instance
+        """
+        filename = cls.__name__ + '.json'
+        if path.exists(filename) is False:
             return []
-        except Exception as e:
-            print(e)
+        with open(filename, 'r') as fd:
+            attrs_dic = cls.from_json_string(fd.read())
+            li = []
+            for i in attrs_dic:
+                li.append(cls.create(**i))
+            return li
