@@ -7,7 +7,8 @@ CREATE TABLE IF NOT EXISTS second_table(
 
 --inserts a record into the table second_table.
 
-INSERT INTO second_table
+INSERT INTO 
+    second_table
 VALUES
     (1, 'John', 10),
     (2, 'Alex', 3),
