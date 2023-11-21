@@ -3,7 +3,7 @@ CREATE TABLE IF NOT EXISTS second_table(INT, name VARCHAR(256), INT);
 
 --inserts a record into the table second_table.
 
-INSERT INTO second_table (id, name, score)
+INSERT INTO second_table
 VALUES
     (1, 'John', 10),
     (2, 'Alex', 3),
