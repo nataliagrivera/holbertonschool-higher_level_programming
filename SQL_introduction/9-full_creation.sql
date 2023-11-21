@@ -5,8 +5,6 @@ CREATE TABLE IF NOT EXISTS second_table(
     score INT
     );
 
---inserts a record into the table second_table.
-
 INSERT INTO 
     second_table
 VALUES
