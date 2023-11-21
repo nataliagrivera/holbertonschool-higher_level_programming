@@ -1,5 +1,9 @@
 -- Creates a table called seocnd_table in the database.
-CREATE TABLE IF NOT EXISTS second_table(INT, name VARCHAR(256), INT);
+CREATE TABLE IF NOT EXISTS second_table(
+    id INT,
+    name VARCHAR(256),
+    score INT
+    );
 
 --inserts a record into the table second_table.
 
