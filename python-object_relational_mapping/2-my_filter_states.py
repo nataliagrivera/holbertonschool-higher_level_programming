@@ -20,11 +20,11 @@ if __name__ == "__main__":
     # Get the state name from the argument
     state_name = argv[4]
 
-    # Prepare the SQL query using string formatting
-    query = "SELECT * FROM states WHERE name = '{}' ORDER BY id ASC".format(state_name)
+    # Prepare the SQL query using parameterized query
+    query = "SELECT * FROM states WHERE name = %s ORDER BY id ASC"
 
-    # Execute the query
-    cursor.execute(query)
+    # Execute the query with parameterized input
+    cursor.execute(query, (state_name,))
 
     # Fetch and print the results
     results = cursor.fetchall()
