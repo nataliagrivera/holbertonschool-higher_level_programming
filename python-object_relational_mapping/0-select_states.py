@@ -18,13 +18,12 @@ if __name__ == '__main__':
     cur = db.cursor()
 
     # Executing MySql Query
-    cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id")
+    cur.execute("SELECT * FROM states ORDER BY id")
 
     # Obtaining Query Result & prints the result in rows
     rows = cur.fetchall()
     for row in rows:
-        if row[1][0] == 'N':
-            print(row)
+        print(row)
 
     # Clean Up
     cur.close()
