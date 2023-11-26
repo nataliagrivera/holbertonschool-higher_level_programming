@@ -4,26 +4,27 @@
 import MySQLdb
 from sys import argv
 
-if __name__ == "__main__":
-    # Connect to MySQL server
-    db = MySQLdb.connect(
-        host="localhost",
-        port=3306,
-        user=argv[1],
-        passwd=argv[2],
-        db=argv[3]
-    )
+if __name__ == '__main__':
+    u_name = argv[1]
+    psw = argv[2]
+    base = argv[3]
 
-    # Create a cursor object
+    # Connecting to MySQL database
+    db = MySQLdb.connect(host="localhost", user=u_name,
+                        passwd=psw, db=base, port=3306)
+
+    # Creating cursor object
     cur = db.cursor()
 
-    # Execute the query to select states starting with 'N'
-    cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
+    # Executing MySql Query
+    cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id")
 
-    # Fetch and print the results
-    for row in cur.fetchall():
-        print(row)
+    # Obtaining Query Result & prints the result in rows
+    rows = cur.fetchall()
+    for row in rows:
+        if row[1][0] == 'N':
+            print(row)
 
-    # Close cursor and database connection
+    # Clean Up
     cur.close()
     db.close()
